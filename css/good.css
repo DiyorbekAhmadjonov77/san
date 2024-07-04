@@ -1,0 +1,99 @@
+.carding-container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+  
+  .carding{
+	position:relative;
+	margin:20px 0;
+	width:330px;
+	height:400px;
+	transform-style:preserve-3d;
+	transform:perspective(2000px);
+	transition:0.3s ease-in;
+	
+	box-shadow:inset 100px 0 50px rgba(0,0,0,0.5);
+  }
+  
+  .carding:hover{
+	z-index:1111;
+	transform:perspective(2000px) rotate(-5deg);
+	box-shadow:inset 20px 0 50px rgba(0,0,0,0.3);
+	z-index: 0;
+  }
+  
+  .carding .img-container{
+	position:relative;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	transform-origin:left;
+	z-index:1;
+	transition:0.3s;
+	background-color: rgba(255, 2, 2, 0.998);
+	backdrop-filter: blur(6px);
+	box-shadow: 0px 0px 36px rgba(1,1,1,0.2);
+
+  }
+  
+  .carding .img-container img{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	object-fit:cover;
+	object-position: left;
+  }
+  
+  .carding:hover .img-container{
+	transform:rotateY(-135deg);
+  }
+  
+  .carding .carding-details{
+	position:absolute;
+	left:0;
+	top:0;
+	box-sizing:border-box;
+	padding:20px;
+	color:#000;
+  }
+  .carding .carding-details::after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	border-color: rgb(75, 63, 63);
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	content: "";
+  }
+  .carding::before {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;	
+	width: 30px;
+	height: 30px;
+	border-color: rgb(82, 63, 63);
+	border-style: solid;
+	border-width: 0px 2px 2px 0;
+	content: "";
+  }
+   .carding .carding-details h2{
+	margin:0;
+	padding:0.5em 0;
+	text-transform:uppercase;
+	font-size:2em;
+	color:#ed363a;
+  }
+  
+  .carding .carding-details p{
+	margin:0;
+	padding:0;
+	line-height:25px;
+	font-size:1.1em;
+  }

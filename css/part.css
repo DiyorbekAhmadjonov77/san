@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap");
+.bigging {
+  width: 100%;
+}
+.bigging .roww {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin: 10px 0;
+  transition: ease all 0.3s;
+  perspective: 1200px;
+}
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+.card:hover .cover:before {
+  transform: translateZ(30px);
+}
+.card:hover .cover:after {
+  background-color: rgb(191, 23, 23);
+}
+.card:hover .cover h1 {
+  transform: translateZ(100px);
+}
+.card:hover .cover .price {
+  transform: translateZ(60px);
+}
+.card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+.card .cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 0.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card .cover:before {
+  content: "";
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 0.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+.card .cover:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(125, 30, 30, 0.4);
+}
+.card .cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 0.3s;
+  z-index: 3;
+  font-size: 30px;
+  transform: translateZ(0px);
+}
+.card .cover .price {
+  font-weight: 200;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 0.3s;
+  z-index: 4;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+.card .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #D50100;
+  transform-style: preserve-3d;
+  transition: ease all 0.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 0.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: transparent;
+  border: 1px solid white;
+  font-weight: 200;
+  font-size: 1.3em;
+  color: white;
+  padding: 14px 32px;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card .card-back a:hover {
+  background-color: white;
+  color: #0b0f08;
+}
+.card .card-back button {
+  transform-style: preserve-3d;
+  transition: ease transform 0.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: #ff0101;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  font-size: 22px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+.card .card-back button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.card .card-back button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+.card .card-back button:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.card .card-back button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.arrowing {
+  position: absolute;
+  top: 35px;
+  right: 70px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrowing span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrowing span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrowing span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}/*# sourceMappingURL=part.css.map */

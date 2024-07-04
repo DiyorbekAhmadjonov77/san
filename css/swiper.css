@@ -1,0 +1,119 @@
+.swip-main-wrap{
+	width: 100%;
+	max-width: 1120px;
+	margin: auto;
+}
+
+.swiper {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	height: 550px;
+	width: 100%;
+	background-size: cover;
+	background-position: top;
+	background-color: rgb(229, 218, 218);
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.yangiliklar-swiper{
+	height: 320px;
+	width: 320px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+.partner-swiper{
+	background: none !important;
+	height: 220px;
+	width: 120px;
+}
+
+.partner-swiper img{
+	width: 100%;
+	object-fit: contain;
+}
+.hero-btn-prev{
+	background-color: red;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+
+.hero-btn-prev:after{
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+}
+
+.hero-btn-next{
+	background-color: red;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+
+.hero-btn-next:after{
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+}
+@media (max-width:700px){
+	.swip-main-wrap{
+		padding: 15px;
+		box-sizing: border-box !important;
+	}
+
+	.swiper-slide{
+		height: 350px;
+	}
+	
+}
+
+@media (max-width:450px){
+	.swiper-slide {
+		
+		height: 250px;
+		width: 100%;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgb(255, 255, 255);
+	}
+
+	.hero-btn-prev{
+		background-color: red;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+	}
+	
+	
+	
+	.hero-btn-next{
+		background-color: red;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+	}
+	.hero-swip{
+		margin-top: -20px;
+	}
+}
